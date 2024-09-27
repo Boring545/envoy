@@ -26,9 +26,9 @@ def envoy_dependency_imports(go_version = GO_VERSION, jq_version = JQ_VERSION, y
     # TODO: allow building of tools for easier onboarding
     rules_foreign_cc_dependencies(register_default_tools = False, register_built_tools = False)
     go_rules_dependencies()
-    go_register_toolchains(go_version)
-    envoy_download_go_sdks(go_version)
-    gazelle_dependencies(go_sdk = "go_sdk")
+    go_register_toolchains(version = "host")
+    #envoy_download_go_sdks(go_version)
+    gazelle_dependencies()
     apple_rules_dependencies()
     pip_dependencies()
     pip_dev_dependencies()

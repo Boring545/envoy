@@ -551,6 +551,12 @@ config_setting(
     values = {"cpu": "s390x"},
 )
 
+
+config_setting(
+    name = "linux_riscv64",
+    values = {"cpu": "riscv64"},
+)
+
 config_setting(
     name = "linux_mips64",
     values = {"cpu": "mips64"},
@@ -721,6 +727,7 @@ selects.config_setting_group(
         ":linux_ppc",
         ":linux_s390x",
         ":linux_x86_64",
+	":linux_riscv64",
     ],
 )
 
@@ -748,6 +755,7 @@ selects.config_setting_group(
         ":linux_mips64",
         ":linux_ppc",
         ":linux_s390x",
+	":linux_riscv64",
     ],
 )
 

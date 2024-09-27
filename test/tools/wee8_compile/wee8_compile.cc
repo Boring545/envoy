@@ -214,6 +214,8 @@ bool writeWasmModule(const char* path, const wasm::vec<byte_t>& module, size_t s
 #define WEE8_PLATFORM "linux_ppc64le"
 #elif defined(__linux__) && defined(__s390x__)
 #define WEE8_PLATFORM "linux_s390x"
+#elif defined(__linux__) && defined(__riscv64__)
+#define WEE8_PLATFORM "linux_riscv64"
 #elif defined(__APPLE__) && defined(__x86_64__)
 #define WEE8_PLATFORM "macos_x86_64"
 #elif defined(__APPLE__) && defined(__arm64__)
