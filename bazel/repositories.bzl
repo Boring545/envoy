@@ -1383,5 +1383,8 @@ def _is_linux_ppc(ctxt):
 def _is_linux_s390x(ctxt):
     return _is_linux(ctxt) and _is_arch(ctxt, "s390x")
 
+def _is_linux_riscv64(ctxt):
+    return _is_linux(ctxt) and _is_arch(ctxt, "riscv64")
+
 def _is_linux_x86_64(ctxt):
     return _is_linux(ctxt) and _is_arch(ctxt, "x86_64")
